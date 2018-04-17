@@ -10,12 +10,34 @@
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
 
 </head>
 
 <body>
-  <h1> Heroku Sandbox</h1>
+  <h1>Heroku Sandbox</h1>
   <p>Sandbox test</p>
-  <script src="js/scripts.js"></script>
+  <div class="overlay">
+    <div class="vertical-menu">
+  	<a href="#" class="active">Drive</a>
+  	<a onclick="viewMap()" href="#">Reading</a>
+  	<a onclick="showImage()" href="#">Reading Loc 2</a>
+  	<a href="https://www.porsche.com/" target="_blank">Shop Porsche</a>
+  	<a href="https://twitter.com/porsche" target="_blank">News</a>
+  </div>
+  <!-- Map Div - Default Display:-->
+  <div id="map" class="mapLayer" >
+  <img src="https://static.wixstatic.com/media/29b366_5dbf6a9e03734535a76b1e456a9621f6.png/v1/fill/w_387,h_222,al_c,usm_0.66_1.00_0.01/29b366_5dbf6a9e03734535a76b1e456a9621f6.png"></script>
+  </div>
+
+  <!-- 
+    -- Pic Div - Default Display:Not Visible 
+    -- Source is an image but the same method can be used for any content 
+    -->
+  <div id="pic" class="mapLayer">
+  <image class="mapLayer" src="https://static.wixstatic.com/media/29b366_0ffb9fec668a41bba3fac4288556c7a6.jpg/v1/fill/w_387,h_258,al_c,q_80,usm_0.66_1.00_0.01/29b366_0ffb9fec668a41bba3fac4288556c7a6.webp"></image>
+  </div>
+  </div>
+  
 </body>
 </html>
