@@ -1,0 +1,51 @@
+[
+  {
+    "albumId": 1,
+    "id": 1,
+    "title": "accusamus beatae ad facilis cum similique qui sunt",
+    "url": "http://placehold.it/600/92c952",
+    "thumbnailUrl": "http://placehold.it/150/92c952"
+  },
+  {
+    "albumId": 2,
+    "id": 2,
+    "title": "facilis cum similique accusamus beatae ad qui sunt",
+    "url": "http://placehold.it/600x250/00c952",
+    "thumbnailUrl": "http://placehold.it/150/00c952"
+  },
+  {
+    "albumId": 3,
+    "id": 3,
+    "title": "beatae ad accusamus facilis cum similique qui sunt",
+    "url": "http://placehold.it/900x600/92eee2",
+    "thumbnailUrl": "http://placehold.it/150/92eee2"
+  },
+  {
+    "albumId": 4,
+    "id": 4,
+    "title": "accusamus beatae ad facilis cum similique ",
+    "url": "http://placehold.it/400/92c952",
+    "thumbnailUrl": "http://placehold.it/150/92c952"
+  },
+  {
+    "albumId": 5,
+    "id": 5,
+    "title": "qui sunt accusamus beatae ad facilis cum similique qui sunt facilis cum ",
+    "url": "http://placehold.it/600x1024/ddc952",
+    "thumbnailUrl": "http://placehold.it/150/ddc952"
+  },
+  {
+    "albumId": 6,
+    "id": 6,
+    "title": "steve cannot do this accusamus beatae ad facilis cum similique qui sunt",
+    "url": "http://placehold.it/800x600/a2c9a2",
+    "thumbnailUrl": "http://placehold.it/150/a2c9a2"
+  },
+  {
+    "albumId": 7,
+    "id": 7,
+    "title": "test data accusamus beatae ad facilis cum similique qui sunt",
+    "url": "http://placehold.it/600x200/77c002",
+    "thumbnailUrl": "http://placehold.it/150/77c002"
+  },
+]

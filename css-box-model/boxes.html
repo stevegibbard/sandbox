@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Boxes Are Easy!</title>
+    <link rel="stylesheet" href="../css/box-styles.css"/>
+  </head>
+  <body>
+    <h1>Headings Are Block Elements</h1>
+
+    <p>Paragraphs are blocks, too. <em class="inline-example">However</em>, &lt;em&gt; and &lt;strong&gt; elements are not. They are <strong class="inline-example">inline</strong> elements.</p>
+
+    <p>Block elements define the flow of the HTML document, while inline elements do not.</p>
+
+    <p>The above descriptions shows the following key points of box and inline elements:</p>
+    <ul>
+      <li>By default <strong>block boxes appear below the previous block element</strong>.</li>
+      <li><strong>Width</strong> of a block box is <strong>set based on the width of the parent container</strong>.  In this case the body of the HTML document so the box stretches to the width of the browser.</li>
+      <li>By default the <strong>height of a block box</strong> is determined by the content it contains.  Narrowing the browser window will make the heading split across lines.</li>
+      <li><strong>Inline boxes</strong> don't change <strong>vertical spacing</strong>, they aren't used for manipulating layout they are used for styling within a block.</li>
+      <li><strong>Inline box width</strong> is determined by the content it contains, not the width of the parent element.</li>
+    </ul>
+    <p>Any html element can be set as a block box or an inline box by changing the <strong>display</strong> property in CSS. This property is useful when working with images (by default treated as inline blocks) and &lt;a&gt; list items which need to be treated as buttons for a menu.</p>
+    <p>Boxes are made up, from iside out, of:</p>
+    <ol>
+      <li>Content</li>
+      <li>Padding (a background fills to cover content+padding but stops at the border)</li>
+      <li>Border (Useful to add when debugging layout problems as it shows the size of content+padding and highlights the margins)</li>
+      <li>Margin (the size outside of the border). Inline elements ignore top and bottom margins so vertical space cannot be changed on inline elements using margin. If you want an inline element to have a top and or bottom margin then you must change the display property to block.</li>
+    </ol>
+    <p><strong>Margins or Padding?</strong></p>
+    <ul>
+      <li>Padding expands any background, margins are transparent</li>
+      <li>Padding is part of the click area of an element whilst margins are not</li>
+      <li>Margins collapse vertically (the largest margin on two adjacent blocks takes precedence), whilst padding does not. Two paragraphs with top-marging 50px and bottom-margin 25px next to each other in html would have a margin of 50px between them (not 75px).</li>
+
+    </ul>
+    <p><strong>Ways to Prevent Margin Collapse?</strong></p>
+    <ul>
+      <li>Add an empty DIV with non-zero height (e.g. padding-top:1px) in-between the two consecutive blocks.</li>
+      <li>Define blocks so that they all either only use top-margin or bottom-margin padding.</li>
+      <li>Use padding rather than a margin to seperate blocks.  This is not suitable in all cases (E.g when a border is in use or when a background is part of the block).</li>
+      <li>Flexbox layout doesn't have collapsing margins.</li>
+    </ul>
+    <p><strong>Generic Container Elements</strong></p>
+    <p>Generic boxes, &lt;div&gt; and &lt;span&gt; are useful for styling a web page</p>
+    <p><strong>Difference between Span and Div ?</strong></p>
+    <ul>
+      <li>Div is used for block level content</li>
+      <li>Span is used for inline elements</li>
+    </ul>
+    <p><Strong>Sizing Boxes</Strong></p>
+    <p>By default a box will stretch to the size of the content (height) and browser width.  To make a box a set <strong>width</strong> we define the property in CSS.</p>
+    <p>Height and Width define the size of the content of a box, <strong>padding and border</strong> are always added on top of the dimensions specified in CSS.</p>
+    <p>The CSS property <strong>box-sizing</strong> can be used to change how width / height and padding / borders interact.  By default box-sizing is set to <strong>content-box</strong>, this lead to padding and border being added on top of the defined width.  If you want the width specified to also incorporate padding and border then box-sizingf can be changed to <strong>border-box</strong>.</p>
+    <p>Button A below has box-sizing set to default and a width of 250px but because margin is set to 20px and border is set as 2px the actual width is 2px+20px+250px+20px+2px = 294px!</p>
+    <div>Button A</div>
+    <p>Button B below has box-sizing set to content-box and a width of 250px, even though margin is set to 20px and border is set as 2px the actual width is restricted to 250px and the content is space is automatically adjusted to incorporate border and padding into the 250px</p>
+    <div id='bbox'>Button B</div>
+    <p>It is considered <strong>best practice to set box-sizing:content-box in CSS</strong> and overide the default behaviour</p>
+    <p><strong>Aligning Boxes</strong></p>
+    <p>You can align content and inline elements with <strong>text-align</strong>. Aligning boxes though requires one of three methods:</p>
+    <ul>
+      <li>auto-margins - centre alignment</li>
+      <li>floats - alignment of left/right placement</li>
+      <li>flexbox - complete control of alignment</li>
+    </ul>
+    <p>Auto-margins are applied when you add the CSS value <strong>auto</strong> to the left/right <strong>marging</strong> property. When the element in question has a width defined in CSS then an auto margin will make sure the box is aligned to the centre of the container that it belongs to. Button C below demonstrates this.</p>
+    <div id="aalign">Button C</div>
+    <p>Auto margins only worked when a <strong>width</strong> is specified in CSS.</p>
+    <p><strong>Resetting Default Browser Styles</strong></p>
+    <p>Each browser has it's own set of default styles for margin and padding - it is <strong>best practice</strong> to reset your styling at the top of the CSS styles sheet so that each browser uses the same defaults. To do this add:</p>
+    <div class="text-aalign">
+      <p class="p-aalign">* {
+      <br>margin: 0;
+      <br>padding: 0;
+      <br>box-sizing: border-box;
+      }</p>
+    </div>
+  </body>
+</html>
