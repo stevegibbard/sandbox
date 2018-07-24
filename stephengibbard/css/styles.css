@@ -54,7 +54,7 @@ section {
 .page-header {
   position: fixed;
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
 
   width: 100%;
   padding: 5px;
@@ -64,8 +64,8 @@ section {
 .top-menu {
   width: 100%;
   /*background: yellow;*/
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .top-menu > li{
@@ -82,7 +82,7 @@ section {
   margin-top: 40px;
   height: 140px;
   font-style: normal;
-  font-size: 24pt;
+  font-size: 20pt;
   background-color: darkgray;
   color: white;
   display: flex;
@@ -106,8 +106,8 @@ section {
 .linked-skills {
   /*width: 100%;*/
   /*background: yellow;*/
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 a{
@@ -148,7 +148,7 @@ a{
 
 .profile-menu{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width:100%;
   background: #D6E9FE;
   padding-left: 5px;
@@ -157,8 +157,8 @@ a{
 .linked-info {
   /*width: 100%;*/
   /*background: yellow;*/
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .linked-info > li{
