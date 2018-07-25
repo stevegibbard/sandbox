@@ -2,7 +2,7 @@
   font-family: 'Source Sans Pro';
   src: url('fonts/SourceSansPro-Regular.ttf') format('ttf');
   font-style:normal;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @font-face {
@@ -15,7 +15,7 @@
 @font-face {
   font-family: 'Source Sans Pro';
   src: url('fonts/SourceSansPro-BoldItalic.ttf') format('ttf');
-  font-style:bold;
+  font-style:normal;
   font-weight: 700;
 }
 
@@ -27,7 +27,7 @@
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
   line-height: 1.6em;
   color: #5D6063;
@@ -54,9 +54,10 @@ section {
 .page-header {
   position: fixed;
   display: flex;
-  justify-content:center;
-
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height:80px;
   padding: 5px;
   background: #D6E9FE;
 }
@@ -152,6 +153,7 @@ a{
   width:100%;
   background: #D6E9FE;
   padding-left: 5px;
+  order:2;
 }
 
 .linked-info {
@@ -174,15 +176,31 @@ a{
 .bold-italic{
   width:80%;
   font-style: italic;
+  font-weight:normal;
   font-size: 18pt;
   text-align: center;
 }
 
 .plain-text{
   height: 120px;
-  font-style: Regular;
+  font-weight: normal;
   font-size: 14pt;
   text-align: center;
+}
+
+.right-container {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width:100%;
+}
+
+.quote{
+  height: 40px;
+  font-style:italic;
+  font-size: 18pt;
+  text-align: center;
+  order:1;
 }
 
 footer{
@@ -190,4 +208,111 @@ footer{
   font-style: italic;
   font-size: 12pt;
   text-align: center;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 600px) and (max-width: 960px) {
+  .container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:100%;
+  }
+  .main-content{
+    width: 50%;
+    order:1;
+  }
+  .right-container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:50%;
+    order:2;
+  }
+  .profile-menu{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    margin-top: 40px;
+    background: darkgray;
+    order:0;
+  }
+  .quote{
+    height: 40px;
+    font-style:italic;
+    font-size: 18pt;
+    text-align: center;
+    order:0;
+  }
+
+  .linked-info > li > a{
+    color: white;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  .page {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .page-header {
+    /*
+     * if I have this as fixed then the menu
+     * is not restricted to width 960px.
+     */
+    position:relative;
+  }
+  .container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:100%;
+  }
+
+  .image-left{
+    width: 33.3%;
+    order:1;
+  }
+  .image-left img{
+    display: block;
+    width:100%;
+    order:1;
+  }
+
+  .main-content{
+    width: 33.3%;
+    order:2;
+  }
+  .right-container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:33.3%;
+    order:3;
+  }
+  .profile-menu{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    margin-top: 40px;
+    background: darkgray;
+    order:0;
+  }
+
+  .linked-info > li > a{
+    color: white;
+  }
+
+  .quote{
+    height: 40px;
+    font-style:italic;
+    font-size: 18pt;
+    text-align: center;
+    order:0;
+  }
+
 }
