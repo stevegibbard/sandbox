@@ -44,11 +44,10 @@ body {
 
 section {
   width: 100%;
-  height: 150px;
+  height: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 10px;
 }
 
 .page-header {
@@ -59,7 +58,6 @@ section {
   width: 100%;
   height:80px;
   padding: 5px;
-  background: #D6E9FE;
 }
 
 .top-menu {
@@ -80,10 +78,10 @@ section {
 }
 
 .article-header {
-  margin-top: 40px;
+  margin-top: 80px;
   height: 140px;
   font-style: normal;
-  font-size: 20pt;
+  font-size: 18pt;
   background-color: darkgray;
   color: white;
   display: flex;
@@ -92,16 +90,15 @@ section {
 }
 
 .sub-header {
+  height: 60px;
   font-style: italic;
-  font-size: 20pt;
+  font-size: 18pt;
 }
 
 .content{
   display: flex;
   justify-content: center;
   width:100%;
-  background: #D6E9FE;
-  padding-left: 5px;
 }
 
 .linked-skills {
@@ -113,6 +110,7 @@ section {
 
 a{
   color: black;
+  text-decoration: none;
 }
 
 .button-skills {
@@ -151,8 +149,7 @@ a{
   display: flex;
   justify-content: center;
   width:100%;
-  background: #D6E9FE;
-  padding-left: 5px;
+  background: darkgray;
   order:2;
 }
 
@@ -173,6 +170,10 @@ a{
   margin-right: 0;
 }
 
+.linked-info > li > a{
+  color: white;
+}
+
 .bold-italic{
   width:80%;
   font-style: italic;
@@ -182,7 +183,6 @@ a{
 }
 
 .plain-text{
-  height: 120px;
   font-weight: normal;
   font-size: 14pt;
   text-align: center;
@@ -196,7 +196,6 @@ a{
 }
 
 .quote{
-  height: 40px;
   font-style:italic;
   font-size: 18pt;
   text-align: center;
@@ -212,16 +211,22 @@ footer{
 
 /* Tablet Styles */
 @media only screen and (min-width: 600px) and (max-width: 960px) {
+  .page-header {
+    justify-content: flex-end;
+  }
+
   .container {
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
     width:100%;
   }
+
   .main-content{
     width: 50%;
     order:1;
   }
+
   .right-container {
     display:flex;
     flex-wrap: wrap;
@@ -229,25 +234,22 @@ footer{
     width:50%;
     order:2;
   }
+
   .profile-menu{
     display:flex;
     justify-content: center;
     align-items: center;
     height: 140px;
-    margin-top: 40px;
+    margin-top: 80px;
     background: darkgray;
     order:0;
   }
+
   .quote{
-    height: 40px;
     font-style:italic;
     font-size: 18pt;
     text-align: center;
     order:0;
-  }
-
-  .linked-info > li > a{
-    color: white;
   }
 }
 
@@ -259,12 +261,10 @@ footer{
   }
 
   .page-header {
-    /*
-     * if I have this as fixed then the menu
-     * is not restricted to width 960px.
-     */
-    position:relative;
+    justify-content: flex-end;
+    max-width:960px;
   }
+
   .container {
     display:flex;
     flex-wrap: wrap;
@@ -286,6 +286,7 @@ footer{
     width: 33.3%;
     order:2;
   }
+
   .right-container {
     display:flex;
     flex-wrap: wrap;
@@ -293,12 +294,13 @@ footer{
     width:33.3%;
     order:3;
   }
+
   .profile-menu{
     display:flex;
     justify-content: center;
     align-items: center;
     height: 140px;
-    margin-top: 40px;
+    margin-top: 80px;
     background: darkgray;
     order:0;
   }
@@ -308,7 +310,6 @@ footer{
   }
 
   .quote{
-    height: 40px;
     font-style:italic;
     font-size: 18pt;
     text-align: center;
