@@ -104,8 +104,8 @@ section {
 .linked-skills {
   /*width: 100%;*/
   /*background: yellow;*/
-  padding-left: 20px;
-  padding-right: 20px;
+  /*padding-left: 20px;
+  padding-right: 20px;*/
 }
 
 a{
@@ -115,34 +115,24 @@ a{
 
 .button-skills {
   display: inline-block;
-  width:60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background: darkgray;
-  margin-right: 15px;
+  margin-right: 40px;
   text-align: center;
   border-radius: 50%;
 }
-
-.button-skills > li{
-  /*display: inline-block;*/
-  list-style: none;
-  /*background: darkgray;*/
-  padding-top: 25%;
-}
-
-.button-skills > li > a{
-  color: white;
-}
-
-.button-skills :hover{
-  width:60px;
-  height: 60px;
-  background: gray;
-  border-radius: 50%;
-}
-
-.button-skills > li:last-of-type {
+.button-end {
   margin-right: 0;
+}
+.button-skills > a{
+  font-weight:300;
+  color: white;
+  font-size: 12pt;
+}
+
+.button-skills:hover{
+  background: gray;
 }
 
 .profile-menu{
@@ -305,15 +295,10 @@ footer{
     order:0;
   }
 
-  .linked-info > li > a{
-    color: white;
-  }
-
   .quote{
     font-style:italic;
     font-size: 18pt;
     text-align: center;
     order:0;
   }
-
 }
