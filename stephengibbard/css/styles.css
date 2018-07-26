@@ -120,6 +120,7 @@ a{
   background: darkgray;
   margin-right: 40px;
   text-align: center;
+  border: none;
   border-radius: 50%;
 }
 .button-end {
